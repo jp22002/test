@@ -1,0 +1,27 @@
+<body>
+    <h1>hello</h1>
+    <img src="mustache.png" class="image" id="mouse-follower" alt="Following Image">
+    <img src="mika.jpg" class="kiwi" alt="Following Image">
+    <p>vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</p>
+</body>
+<style>
+    .kiwi {
+        width: 1000px;
+        height: 1000px;
+    }
+    #mouse-follower {
+    position: absolute;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+</style>
+<script>
+    const follower = document.getElementById('mouse-follower');
+
+    window.addEventListener('mousemove', (e) => {
+    follower.style.left = e.pageX + 'px';
+    follower.style.top = e.pageY + 'px';
+    });    
+</script>
